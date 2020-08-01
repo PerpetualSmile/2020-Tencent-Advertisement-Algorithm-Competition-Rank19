@@ -1,8 +1,18 @@
-# 代码和模型说明
+队伍：此心安处是吾乡
 
-本次比赛使用到的代码都写在src目录下的jupyter notebook中了，解压完训练和测试数据之后，可以在TI-ONE平台上直接运行。运行顺序是按照notebook的命名编号从小到大依次运行。
+队员：[JackDong](<https://github.com/PerpetualSmile>)、[fengli](<https://github.com/fenglicui>)、[zhang](http://iip.nju.edu.cn/index.php/Yi_Zhang_@_IIP,_NJU-CS)
 
+## 运行环境
 
+- jupyter notebook
+- gensim
+- pytorch 1.5.1
+
+## 代码和模型说明
+
+- 本次比赛使用到的所有代码都写在jupyter notebook中了，解压完训练和测试数据之后，可以在TI-ONE平台上直接运行。运行顺序是按照notebook的命名编号从小到大依次运行。
+
+- 各个notebook的输入、输出以及主要功能说明如下：
 
 | notebook                               | 功能                           | 输入文件               | 输出文件             |
 | -------------------------------------- | ------------------------------ | ---------------------- | -------------------- |
@@ -14,5 +24,10 @@
 
 
 
-最后一共为12个模型的融合，不同的参数设置都已经写在每个notebook中，每个notebook命名的最后分数代表单模五折的线上分数。notebook运行使用的虚拟环境为conda_pytorch_py3，需要注意将版本升级到pytorch1.5.1，其他环境都与TI-ONE的默认配置一样，可以直接运行复现结果。
+- 特征只使用了不同窗口大小和不同维度大小的word embedding，模型使用了双层BiLSTM
+- 6和7的notebook里使用了Transformer的模型，但单模分数只有1.464，最终没有使用，放在这里仅供参考
+
+- 最后一共为3和4版本的12个模型的融合，不同的参数设置都已经写在每个notebook中了，每个notebook命名的最后分数代表单模五折的线上分数。
+
+- 最后融合结果的B榜得分为1.478，最终排名TOP19。
 
